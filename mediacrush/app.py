@@ -131,19 +131,6 @@ def about():
 def demo():
     return redirect('/about', code=301)
 
-@app.route('/advertising')
-def advertising():
-    return render_template("advertising.html")
-
-@app.route("/donate")
-def donate():
-    opted_out = "ad-opt-out" in request.cookies
-    return render_template("donate.html", ads=not opted_out)
-
-@app.route("/thanks")
-def thanks():
-    return render_template("thanks.html")
-
 @app.route("/version")
 def version():
     v = subprocess.check_output(["git", "log", "-1"])
@@ -152,10 +139,6 @@ def version():
 @app.route("/compliment")
 def compliment():
     return random.choice(compliments)
-
-@app.route("/serious")
-def serious():
-    return render_template("serious.html")
 
 @app.route("/troubleshooting")
 def troubleshooting():

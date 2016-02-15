@@ -4,7 +4,7 @@
         <meta charset=utf-8 />
         <meta type="robots" content="noindex,nofollow" />
         <meta property="og:type" content="{{ mimetype }}" />
-        <meta property="og:image" content="https://mediacru.sh/{{ original }}" />
+        <meta property="og:image" content="https://mediacrush.coding4.coffee/{{ original }}" />
         <meta property="og:site_name" content="MediaCrush" />
         {% if mobile %}
         <meta name="viewport" content="width=device-width" />
@@ -13,11 +13,11 @@
         <meta property="og:site_name" content="MediaCrush" />
         {% if processor.startswith("video") %}
             {# Generated thumbnail #}
-            <meta property="og:image" content="https://mediacru.sh/{{ filename }}.png" />
+            <meta property="og:image" content="https://mediacrush.coding4.coffee/{{ filename }}.png" />
         {% elif processor.startswith("audio") %}
-            <meta property="og:image" content="https://mediacru.sh/static/audio.png" />
+            <meta property="og:image" content="https://mediacrush.coding4.coffee/static/audio.png" />
         {% else %}
-            <meta property="og:image" content="https://mediacru.sh/{{ original }}" />
+            <meta property="og:image" content="https://mediacrush.coding4.coffee/{{ original }}" />
         {% endif %}
         <title>MediaCrush</title>
         <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>

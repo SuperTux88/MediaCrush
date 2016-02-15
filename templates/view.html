@@ -80,16 +80,13 @@
         <li><a href="#" id="embed-link">Embed</a></li>
         <li><a href="#" id="share-link">Share</a></li>
         <li><a href="/download/{{ shard(original) }}">Download</a></li>
-        <li><a href="/report/{{ filename }}" id="report">Report</a></li>
         <li class="{% if can_delete == 'check' or can_delete == False %}hidden{% endif %}"><a href="#" class="red" id="delete">Delete</a></li>
     </ul>
     <noscript>
     <ul class="inline">
         <li><a href="/download/{{ shard(original) }}">Download</a></li>
-        <li><a href="/report/{{ filename }}" class="red">Report</a></li>
         <li class="{% if can_delete == 'check' or can_delete == False %}hidden{% endif %}"><a href="#" class="red" id="delete">Delete</a></li>
     </ul>
-    <p>Anonymous users are especially encouraged to click "report" for all media that violates our <a href="/serious">terms of use</a>.</p>
     </noscript>
     {% if compression %}
     {{ compression }}% faster on MediaCrush!
@@ -116,5 +113,4 @@
         <dd><input type="text" value='{{ share('bbcode', filename) }}' class="selectall" /></dd>
     </dl>
 </div>
-{% include "advertisement.html" %}
 {% endblock %}

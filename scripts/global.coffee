@@ -114,21 +114,6 @@ window.getPosition = (e) ->
         e = e.offsetParent
     return [x, y]
 
-window.addEventListener('DOMContentLoaded', (e) ->
-    link.addEventListener('click', (e) ->
-        e.preventDefault()
-        if readCookie('ad-opt-out')
-            e.target.textContent = 'opt-out'
-            a.textContent = 'opted-in' for a in document.querySelectorAll('.ad-state')
-            createCookie('ad-opt-out', '', -1)
-        else
-            e.target.textContent = 'opt-in'
-            a.textContent = 'opted-out' for a in document.querySelectorAll('.ad-state')
-            createCookie('ad-opt-out', 1, 3650)
-        ad.innerHTML = "Sorry! You won't see any ads again. If you change your mind, <a href='/advertising'>opt-in here</a>." for ad in document.querySelectorAll('.advertisement')
-    , false) for link in document.querySelectorAll('.ad-opt-out')
-, false)
-
 if not window.embedded
     console.log("""
    -++++:--`                  

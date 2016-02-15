@@ -35,20 +35,6 @@ function createCookie(name,value,days) {
     else var expires = "; expires=Thu, 01-Jan-1970 00:00:01 GMT";
     document.cookie = name+"="+value+expires+"; path=/";
 }
-function adOptOut(showAlert) {
-    createCookie('ad-opt-out', '1', 3650); // 3650 days is 10 years, which isn't forever, but is close enough
-    var gad = document.getElementById('gad');
-    var lgad = document.getElementById('lgad');
-    if (gad) {
-        gad.innerHTML = "You won't see any ads again. If you regret it, head over to the <a href='/donate'>donation</a> page, where you can opt-in.";
-    }
-    if (lgad) {
-        lgad.innerHTML = "You won't see any ads again. If you regret it, head over to the <a href='/donate'>donation</a> page, where you can opt-in.";
-    }
-    if (showAlert) {
-        alert("You won't see any ads again. If you regret it, head over to the donation page, where you can opt-in.");
-    }
-}
 function switchTheme() {
     if (readCookie('dark_theme'))
         createCookie('dark_theme', '', -1);
