@@ -91,7 +91,6 @@ def process_file(path, h, ignore_limit):
     f.processor = processor
     queue = "priority" if processor.startswith("image") else "celery"
 
-    setattr(f.flags, 'nsfw', False)
     if result and result['flags']:
         for flag, value in result['flags'].items():
             setattr(f.flags, flag, value)

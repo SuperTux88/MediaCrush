@@ -55,13 +55,13 @@ class BitVector(object):
 
 # Note: if you want to add a flag, you must append it to the end of the list
 flags_per_processor = {
-    'video': ['autoplay', 'loop', 'mute', 'nsfw'],
-    'image': ['nsfw'],
-    'image/png': ['nsfw'],
-    'image/jpeg': ['nsfw'],
-    'image/svg+xml': ['nsfw'],
-    'image/x-gimp-xcf': ['nsfw'],
-    'audio': ['nsfw']
+    'video': ['autoplay', 'loop', 'mute'],
+    'image': [],
+    'image/png': [],
+    'image/jpeg': [],
+    'image/svg+xml': [],
+    'image/x-gimp-xcf': [],
+    'audio': []
 }
 
 def normalise_processor(processor):
