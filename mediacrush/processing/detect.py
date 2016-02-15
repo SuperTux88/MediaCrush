@@ -296,7 +296,7 @@ def detect_imagemagick(path):
             match = re.search('(\d+)x(\d+)', line)
             if line.startswith('Geometry: '):
                 metadata = { 'dimensions': { 'width': int(match.group(1)), 'height': int(match.group(2)) } }
-        if mimetype in [ 'image/png', 'image/jpeg', 'image/svg+xml' ]:
+        if mimetype in [ 'image/png', 'image/jpeg', 'image/svg+xml', 'image/gif' ]:
             return {
                 'type': mimetype,
                 'metadata': metadata,
